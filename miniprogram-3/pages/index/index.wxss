@@ -1,0 +1,17 @@
+/**index.wxss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+
+}
+
+.nickname-input {
+  width: 30%; /* 确保宽度不为0 */
+  height: 40px; /* 明确高度 */
+  border: 1px solid #ccc; /* 添加边框便于调试 */
+}

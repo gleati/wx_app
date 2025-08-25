@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <image src="{{userInfo.avatarUrl}}"></image>  <!-- 用于显示用户头像 -->
+    <input type="nickname" class="nickname-input" placeholder="请输入昵称" bind:change="onInputChange" /> <!-- 用于显示用户的昵称 --> <!-- 由于政策的改变，导致二者无法一起上传，所以只能分开上传 -->
+    <button open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">点击上传头像</button>   <!-- 按钮，用于上传用户头像 -->
+  </view>
+</scroll-view>
