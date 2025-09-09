@@ -1,0 +1,22 @@
+<!-- index.wxml -->
+<!-- 游戏选关页面容器 -->
+<view class='container'>
+  <!-- 页面主标题 -->
+  <view class='title'>游戏选关</view>
+  <!-- 关卡列表容器 -->
+  <view class='levelBox'>
+    <!-- 循环渲染关卡列表（通过wx:for绑定levels数据，wx:key指定索引作为唯一标识） -->
+    <view 
+      class='box' 
+      wx:for="{{levels}}" 
+      wx:key="levels{{index}}" 
+      bindtap='chooseLevel' 
+      data-level='{{index}}'
+    >
+      <!-- 关卡图标（路径来自data-level对应的levels数组项） -->
+      <image src='/images/{{item}}'></image>
+      <!-- 关卡序号文本（从1开始计数） -->
+      <text>第{{index+1}}关</text>
+    </view>
+  </view>
+</view>
